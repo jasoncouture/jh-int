@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BillManager.UnitTests", "Bi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BillManager.Api", "BillManager.Api\BillManager.Api.csproj", "{452DB60E-3C41-4916-BF3A-780D72429F1B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BillManager.Core.Database", "BillManager.Core.Database\BillManager.Core.Database.csproj", "{4345D219-89BF-4C3E-9FAC-75FE220D9EF7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -58,5 +60,17 @@ Global
 		{452DB60E-3C41-4916-BF3A-780D72429F1B}.Release|x64.Build.0 = Release|Any CPU
 		{452DB60E-3C41-4916-BF3A-780D72429F1B}.Release|x86.ActiveCfg = Release|Any CPU
 		{452DB60E-3C41-4916-BF3A-780D72429F1B}.Release|x86.Build.0 = Release|Any CPU
+		{4345D219-89BF-4C3E-9FAC-75FE220D9EF7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4345D219-89BF-4C3E-9FAC-75FE220D9EF7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4345D219-89BF-4C3E-9FAC-75FE220D9EF7}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{4345D219-89BF-4C3E-9FAC-75FE220D9EF7}.Debug|x64.Build.0 = Debug|Any CPU
+		{4345D219-89BF-4C3E-9FAC-75FE220D9EF7}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{4345D219-89BF-4C3E-9FAC-75FE220D9EF7}.Debug|x86.Build.0 = Debug|Any CPU
+		{4345D219-89BF-4C3E-9FAC-75FE220D9EF7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4345D219-89BF-4C3E-9FAC-75FE220D9EF7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4345D219-89BF-4C3E-9FAC-75FE220D9EF7}.Release|x64.ActiveCfg = Release|Any CPU
+		{4345D219-89BF-4C3E-9FAC-75FE220D9EF7}.Release|x64.Build.0 = Release|Any CPU
+		{4345D219-89BF-4C3E-9FAC-75FE220D9EF7}.Release|x86.ActiveCfg = Release|Any CPU
+		{4345D219-89BF-4C3E-9FAC-75FE220D9EF7}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
