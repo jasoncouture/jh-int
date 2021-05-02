@@ -4,4 +4,8 @@
     <TargetFramework>net5.0</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\BillManager.Core.Database\BillManager.Core.Database.csproj" />
+  </ItemGroup>
+
 </Project>
