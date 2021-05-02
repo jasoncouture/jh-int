@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BillManager.Api", "BillMana
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BillManager.Core.Database", "BillManager.Core.Database\BillManager.Core.Database.csproj", "{4345D219-89BF-4C3E-9FAC-75FE220D9EF7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BillManager.IntegrationTests", "BillManager.IntegrationTests\BillManager.IntegrationTests.csproj", "{CED2F739-6738-40BD-B924-14E2BD8A10EE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -72,5 +74,17 @@ Global
 		{4345D219-89BF-4C3E-9FAC-75FE220D9EF7}.Release|x64.Build.0 = Release|Any CPU
 		{4345D219-89BF-4C3E-9FAC-75FE220D9EF7}.Release|x86.ActiveCfg = Release|Any CPU
 		{4345D219-89BF-4C3E-9FAC-75FE220D9EF7}.Release|x86.Build.0 = Release|Any CPU
+		{CED2F739-6738-40BD-B924-14E2BD8A10EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CED2F739-6738-40BD-B924-14E2BD8A10EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CED2F739-6738-40BD-B924-14E2BD8A10EE}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{CED2F739-6738-40BD-B924-14E2BD8A10EE}.Debug|x64.Build.0 = Debug|Any CPU
+		{CED2F739-6738-40BD-B924-14E2BD8A10EE}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{CED2F739-6738-40BD-B924-14E2BD8A10EE}.Debug|x86.Build.0 = Debug|Any CPU
+		{CED2F739-6738-40BD-B924-14E2BD8A10EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CED2F739-6738-40BD-B924-14E2BD8A10EE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CED2F739-6738-40BD-B924-14E2BD8A10EE}.Release|x64.ActiveCfg = Release|Any CPU
+		{CED2F739-6738-40BD-B924-14E2BD8A10EE}.Release|x64.Build.0 = Release|Any CPU
+		{CED2F739-6738-40BD-B924-14E2BD8A10EE}.Release|x86.ActiveCfg = Release|Any CPU
+		{CED2F739-6738-40BD-B924-14E2BD8A10EE}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
