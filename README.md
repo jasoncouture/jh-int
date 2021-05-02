@@ -1,0 +1,1 @@
+# Sample application for splitting a bill among friends
