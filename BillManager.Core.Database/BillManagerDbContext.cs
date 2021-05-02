@@ -10,6 +10,12 @@ namespace BillManager.Core.Database
         public DbSet<Person> People { get; set; }
         public DbSet<Bill> Bills { get; set; }
         public DbSet<PersonBillPortion> PersonBillPortions { get; set; }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<PersonBillPortion>(i => i.HasKey(x => new { x.PersonId, x.BillId }));
+            base.OnModelCreating(modelBuilder);
+        }
     }
 
 

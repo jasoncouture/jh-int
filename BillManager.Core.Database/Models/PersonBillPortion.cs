@@ -6,11 +6,9 @@ namespace BillManager.Core.Database.Models
 {
     public class PersonBillPortion
     {
-        [Key, Column(Order = 0)]
         public long PersonId { get; set; }
         [ForeignKey(nameof(PersonId))]
         public virtual Person Person { get; set; }
-        [Key, Column(Order = 1)]
         public long BillId { get; set; }
         [ForeignKey(nameof(BillId)), Key]
         public virtual Bill Bill { get; set; }
@@ -18,6 +16,7 @@ namespace BillManager.Core.Database.Models
         public decimal Amount { get; set; }
 
         public decimal AmountPaid { get; set; }
+       
         public DateTimeOffset Created { get; set; } = DateTimeOffset.Now;
     }
 }
