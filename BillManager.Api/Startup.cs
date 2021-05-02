@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.SpaServices.ReactDevelopmentServer;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Diagnostics;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -27,7 +28,7 @@ namespace BillManager.Api
             if (!useInMemoryDb)
                 services.AddDbContextPool<BillManagerDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString(nameof(BillManagerDbContext))));
             else
-                services.AddDbContextPool<BillManagerDbContext>(options => options.UseInMemoryDatabase(nameof(BillManagerDbContext)));
+                services.AddDbContextPool<BillManagerDbContext>(options => options.UseInMemoryDatabase(nameof(BillManagerDbContext)).ConfigureWarnings(x => x.Ignore(InMemoryEventId.TransactionIgnoredWarning)));
             services.AddSingleton<IBillPortionCalculator, BillPortionCalculator>();
             services.AddScoped<IPersonRepository, PersonRepository>();
             services.AddScoped<IBillRepository, BillRepository>();
