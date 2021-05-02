@@ -4,14 +4,16 @@ using BillManager.Core.Database;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace BillManager.Core.Database.Migrations
 {
     [DbContext(typeof(BillManagerDbContext))]
-    partial class BillManagerDbContextModelSnapshot : ModelSnapshot
+    [Migration("20210502184722_AddNameAndTotalToBills")]
+    partial class AddNameAndTotalToBills
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
