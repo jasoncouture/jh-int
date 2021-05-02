@@ -1,7 +1,10 @@
+using BillManager.Core;
+using BillManager.Core.Database;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.SpaServices.ReactDevelopmentServer;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -20,6 +23,14 @@ namespace BillManager.Api
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            var useInMemoryDb = Configuration.GetValue("UseInMemoryDatabase", false);
+            if (!useInMemoryDb)
+                services.AddDbContextPool<BillManagerDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString(nameof(BillManagerDbContext))));
+            else
+                services.AddDbContextPool<BillManagerDbContext>(options => options.UseInMemoryDatabase(nameof(BillManagerDbContext)));
+            services.AddSingleton<IBillPortionCalculator, BillPortionCalculator>();
+            services.AddScoped<IPersonRepository, PersonRepository>();
+            services.AddScoped<IBillRepository, BillRepository>();
 
             services.AddControllersWithViews();
 
