@@ -9,6 +9,7 @@ using Microsoft.EntityFrameworkCore.Diagnostics;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using System;
 
 namespace BillManager.Api
 {
@@ -83,6 +84,19 @@ namespace BillManager.Api
                     spa.UseReactDevelopmentServer(npmScript: "start");
                 }
             });
+
+            UpgradeDatabase(app.ApplicationServices, Configuration);
+        }
+
+        private static void UpgradeDatabase(IServiceProvider serviceProvider, IConfiguration configuration) 
+        {
+            if(!configuration.GetValue("UpgradeDatabase", false))
+                return;
+
+            // Run DB Migrations via code, this is helpful for testing and is disabled by default.
+            using var serviceScope = serviceProvider.CreateScope();
+            var dbContext = serviceScope.ServiceProvider.GetRequiredService<BillManagerDbContext>();
+            dbContext.Database.Migrate();
         }
     }
 }
