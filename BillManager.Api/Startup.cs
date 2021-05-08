@@ -40,6 +40,8 @@ namespace BillManager.Api
             {
                 configuration.RootPath = "ClientApp/build";
             });
+
+            services.AddSwaggerGen();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -59,6 +61,9 @@ namespace BillManager.Api
             app.UseHttpsRedirection();
             app.UseStaticFiles();
             app.UseSpaStaticFiles();
+            
+            app.UseSwagger();
+            app.UseSwaggerUI();
 
             app.UseRouting();
 
