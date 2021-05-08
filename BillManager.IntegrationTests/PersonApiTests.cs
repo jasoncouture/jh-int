@@ -1,58 +1,26 @@
 using BillManager.Api;
 using BillManager.Core;
-using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc.Testing;
-using Microsoft.Extensions.Configuration;
-using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
 using System;
-using System.Collections.Generic;
-using System.IO;
 using System.Net;
-using System.Net.Http;
-using System.Text;
 using System.Threading.Tasks;
 using Xunit;
 
 namespace BillManager.IntegrationTests
 {
-    public class PersonApiTests : IClassFixture<WebApplicationFactory<Startup>>
+
+    public class PersonApiTests : ApiTestBase
     {
-        private WebApplicationFactory<Startup> _webApplicationFactory;
-
-        public PersonApiTests(WebApplicationFactory<Startup> webApplicationFactory)
+        public PersonApiTests(WebApplicationFactory<Startup> webApplicationFactory) : base(webApplicationFactory)
         {
-            _webApplicationFactory = webApplicationFactory.WithWebHostBuilder(builder => builder.ConfigureAppConfiguration(ConfigureAppConfiguration));
         }
 
-        private void ConfigureAppConfiguration(IConfigurationBuilder configuration)
-        {
-            // For testing, we want the in memory database to be used.
-            configuration.AddInMemoryCollection(new[] { new KeyValuePair<string, string>("UseInMemoryDatabase", "true") });
-        }
 
         [Fact]
         public void ApplicationStartsWithoutError()
         {
-            var client = _webApplicationFactory.CreateClient();
+            var client = CreateClient();
             Assert.NotNull(client);
-        }
-
-        private HttpContent CreateObjectContent<T>(T model)
-        {
-            var json = JObject.FromObject(model).ToString(Formatting.None);
-            return new StringContent(json, Encoding.UTF8, "application/json");
-        }
-
-        private async Task<T> DeserializeResponseAsync<T>(HttpContent content)
-        {
-            JsonSerializer serializer = new JsonSerializer();
-
-            using(var streamReader = new StreamReader(await content.ReadAsStreamAsync()))
-            using (var jsonReader = new JsonTextReader(streamReader))
-            {
-                return serializer.Deserialize<T>(jsonReader);
-            }
         }
 
         // Tests would normally be much smaller, but this depends on a sequence of operations.
@@ -61,7 +29,7 @@ namespace BillManager.IntegrationTests
         [Fact]
         public async Task PersonTestSuite()
         {
-            var client = _webApplicationFactory.CreateClient();
+            var client = CreateClient();
             Assert.NotNull(client);
             var personToCreate = new PersonModel
             {
