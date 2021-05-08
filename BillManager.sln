@@ -1,17 +1,19 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.26124.0
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31205.134
 MinimumVisualStudioVersion = 15.0.26124.0
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BillManager.Core", "BillManager.Core\BillManager.Core.csproj", "{8A717535-E78F-41AC-8414-17C01D55BE2F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BillManager.Core", "BillManager.Core\BillManager.Core.csproj", "{8A717535-E78F-41AC-8414-17C01D55BE2F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BillManager.UnitTests", "BillManager.UnitTests\BillManager.UnitTests.csproj", "{85C30158-20AA-4D52-90ED-5871CBE76550}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BillManager.UnitTests", "BillManager.UnitTests\BillManager.UnitTests.csproj", "{85C30158-20AA-4D52-90ED-5871CBE76550}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BillManager.Api", "BillManager.Api\BillManager.Api.csproj", "{452DB60E-3C41-4916-BF3A-780D72429F1B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BillManager.Api", "BillManager.Api\BillManager.Api.csproj", "{452DB60E-3C41-4916-BF3A-780D72429F1B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BillManager.Core.Database", "BillManager.Core.Database\BillManager.Core.Database.csproj", "{4345D219-89BF-4C3E-9FAC-75FE220D9EF7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BillManager.Core.Database", "BillManager.Core.Database\BillManager.Core.Database.csproj", "{4345D219-89BF-4C3E-9FAC-75FE220D9EF7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BillManager.IntegrationTests", "BillManager.IntegrationTests\BillManager.IntegrationTests.csproj", "{CED2F739-6738-40BD-B924-14E2BD8A10EE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BillManager.IntegrationTests", "BillManager.IntegrationTests\BillManager.IntegrationTests.csproj", "{CED2F739-6738-40BD-B924-14E2BD8A10EE}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{37FEFBC3-BADF-4182-8D55-187119283AE9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,9 +23,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 		Release|x64 = Release|x64
 		Release|x86 = Release|x86
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{8A717535-E78F-41AC-8414-17C01D55BE2F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -86,5 +85,23 @@ Global
 		{CED2F739-6738-40BD-B924-14E2BD8A10EE}.Release|x64.Build.0 = Release|Any CPU
 		{CED2F739-6738-40BD-B924-14E2BD8A10EE}.Release|x86.ActiveCfg = Release|Any CPU
 		{CED2F739-6738-40BD-B924-14E2BD8A10EE}.Release|x86.Build.0 = Release|Any CPU
+		{37FEFBC3-BADF-4182-8D55-187119283AE9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{37FEFBC3-BADF-4182-8D55-187119283AE9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{37FEFBC3-BADF-4182-8D55-187119283AE9}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{37FEFBC3-BADF-4182-8D55-187119283AE9}.Debug|x64.Build.0 = Debug|Any CPU
+		{37FEFBC3-BADF-4182-8D55-187119283AE9}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{37FEFBC3-BADF-4182-8D55-187119283AE9}.Debug|x86.Build.0 = Debug|Any CPU
+		{37FEFBC3-BADF-4182-8D55-187119283AE9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{37FEFBC3-BADF-4182-8D55-187119283AE9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{37FEFBC3-BADF-4182-8D55-187119283AE9}.Release|x64.ActiveCfg = Release|Any CPU
+		{37FEFBC3-BADF-4182-8D55-187119283AE9}.Release|x64.Build.0 = Release|Any CPU
+		{37FEFBC3-BADF-4182-8D55-187119283AE9}.Release|x86.ActiveCfg = Release|Any CPU
+		{37FEFBC3-BADF-4182-8D55-187119283AE9}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5A7F2867-2E26-4604-A09A-1E8D83A3CC8B}
 	EndGlobalSection
 EndGlobal
