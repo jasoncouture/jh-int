@@ -9,7 +9,7 @@ RUN echo "NPM Version:" && npm --version
 FROM mcr.microsoft.com/dotnet/aspnet:5.0 AS base
 COPY --from=node_base . .
 WORKDIR /app
-EXPOSE 5000
+EXPOSE 80
 
 FROM mcr.microsoft.com/dotnet/sdk:5.0 AS build
 COPY --from=node_base . .
